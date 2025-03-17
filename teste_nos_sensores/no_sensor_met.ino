@@ -182,7 +182,7 @@ void OnRxDone( uint8_t *payload, uint16_t size, int16_t rssi_correto, int8_t snr
     velocidade = 0.0; // Ou outro valor padrão, se necessário
   }
 
-  int altura = 600 - distancia; // Altura da lâmina d'água
+  int altura = 600 - distancia; // Essa variável é para nível d'água no rio, que pode ser recebido diretamente do nó-sensor hidrológico. Foi enviada a distância medida, por isso o cálculo está nesse código.
 
   char linha[350]; // Ajuste o tamanho conforme necessário
 
