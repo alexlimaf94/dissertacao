@@ -186,9 +186,9 @@ void OnRxDone( uint8_t *payload, uint16_t size, int16_t rssi_correto, int8_t snr
 
   String dataHora = formatarDataHora();
 
-  sprintf(linha, "%d,%s,%.2f,%.2f,%.2f,%.2f,%.2f,%ld,%d,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f",
+  sprintf(linha, "%d,%s,%.2f,%.2f,%.2f,%.2f,%.2f,%ld,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f",
           txNumber, dataHora.c_str(), inclinacaoX, inclinacaoY, temp, humidity, velocidade, altura, 
-          altura, busvoltage, current_mA, velocidadeVento, temperatura, umidade, chuvaInstante, acumuladoChuva);
+          busvoltage, current_mA, velocidadeVento, temperatura, umidade, chuvaInstante, acumuladoChuva);
 
   String dataToWrite = String(linha); // Converte char[] para String
   sdWriteQueue.push(dataToWrite);
